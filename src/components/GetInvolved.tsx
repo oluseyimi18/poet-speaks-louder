@@ -45,7 +45,7 @@ export default function GetInvolved() {
         </RevealItem>
 
         <RevealItem className="grain bg-ink text-ink-foreground p-10">
-          <p className="eyebrow text-gold">03 · Give</p>
+          <p className="eyebrow text-flame">03 · Give</p>
           <h3 className="text-ink-foreground mt-4 text-3xl">Support the work</h3>
           <dl className="mt-6 space-y-3 text-sm">
             <div className="border-ink-foreground/15 flex items-center justify-between gap-4 border-b pb-3">

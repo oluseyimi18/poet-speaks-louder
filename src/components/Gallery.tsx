@@ -125,7 +125,7 @@ export default function Gallery({ categories }: { categories: GalleryCategory[] 
               className="grid gap-6 md:grid-cols-2"
             >
               <div>
-                <p className="eyebrow text-gold">
+                <p className="eyebrow text-flame">
                   {active.program} · {active.date}
                 </p>
                 <p className="font-display mt-3 text-3xl">{active.heading}</p>
@@ -156,7 +156,7 @@ export default function Gallery({ categories }: { categories: GalleryCategory[] 
             ) : (
               <div className="wrap">
                 <div className="border-ink-foreground/15 flex min-h-[40vh] flex-col items-center justify-center rounded-sm border p-10 text-center">
-                  <p className="eyebrow text-gold">Developing</p>
+                  <p className="eyebrow text-flame">Developing</p>
                   <p className="font-display mt-4 max-w-xl text-4xl">
                     The {active.title} photographs are on their way.
                   </p>
@@ -164,7 +164,7 @@ export default function Gallery({ categories }: { categories: GalleryCategory[] 
                     href={site.instagram.url}
                     target="_blank"
                     rel="noreferrer"
-                    className="eyebrow hover:text-gold mt-8"
+                    className="eyebrow hover:text-flame mt-8"
                   >
                     See highlights on Instagram &rarr;
                   </a>

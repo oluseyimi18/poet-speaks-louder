@@ -13,13 +13,13 @@ export default function Signoff() {
 
         <RevealGroup className="border-ink-foreground/10 mt-12 grid grid-cols-1 gap-8 border-t pt-10 sm:grid-cols-3">
           <RevealItem>
-            <p className="eyebrow text-gold mb-2">Write to us</p>
+            <p className="eyebrow text-flame mb-2">Write to us</p>
             <a href={`mailto:${site.email}`} className="text-ink-foreground/70 hover:text-ink-foreground">
               {site.email}
             </a>
           </RevealItem>
           <RevealItem>
-            <p className="eyebrow text-gold mb-2">Follow</p>
+            <p className="eyebrow text-flame mb-2">Follow</p>
             <a
               href={site.instagram.url}
               target="_blank"
@@ -30,7 +30,7 @@ export default function Signoff() {
             </a>
           </RevealItem>
           <RevealItem>
-            <p className="eyebrow text-gold mb-2">Join</p>
+            <p className="eyebrow text-flame mb-2">Join</p>
             <a
               href={site.joinUrl}
               target="_blank"
