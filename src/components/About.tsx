@@ -28,11 +28,11 @@ export default function About() {
 
       <RevealGroup className="mt-16 grid gap-16 md:grid-cols-2">
         <RevealItem>
-          <p className="eyebrow text-clay">Our Vision</p>
+          <p className="eyebrow text-flame">Our Vision</p>
           <p className="font-display mt-5 text-2xl leading-snug md:text-3xl">{about.vision}</p>
         </RevealItem>
         <RevealItem>
-          <p className="eyebrow text-clay">Our Mission</p>
+          <p className="eyebrow text-flame">Our Mission</p>
           <p className="font-display mt-5 text-2xl leading-snug md:text-3xl">{about.mission}</p>
         </RevealItem>
       </RevealGroup>
