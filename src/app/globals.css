@@ -1,0 +1,249 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-fraunces), ui-serif, Georgia, serif;
+  --font-display: var(--font-fraunces), ui-serif, Georgia, serif;
+
+  --color-flame: var(--flame);
+  --color-amber: var(--amber);
+  --color-gold: var(--gold);
+  --color-red: var(--red);
+  --color-orange: var(--orange);
+  --color-brand: var(--brand);
+  --color-brand-deep: var(--brand-deep);
+  /* Quieter secondary accent — labels and small UI use this so full-saturation flame stays reserved for CTAs and real emphasis */
+  --color-clay: var(--clay);
+  /* "ink" is the near-black background used by inverted sections (ticker, gallery, signoff, footer, the give card) */
+  --color-ink: var(--ink);
+  --color-ink-foreground: var(--ink-foreground);
+  --color-cream: var(--cream);
+  --color-sand: var(--sand);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+}
+
+:root {
+  color-scheme: light;
+
+  /* Poets Speak Louder brand (from the logo) */
+  --red: #fc0f02;
+  --flame: #f93f06;
+  --orange: #f76c0a;
+  --amber: #ff9f1c;
+  --gold: var(--amber); /* accent used on inverted (ink) sections */
+  --fire: linear-gradient(100deg, #fc0f02 0%, #f93f06 35%, #f76c0a 65%, #ff9f1c 100%);
+  --brand: var(--flame);
+  --brand-deep: #c93300; /* flame, darkened so small text passes contrast */
+  --clay: #b5472a; /* muted terracotta — eyebrows/labels on light sections, so flame stays reserved for CTAs, stats and em emphasis */
+  --text-ink: #262322; /* body text color, not to be confused with the --ink section background below */
+  --ink: #15110f;
+  --ink-foreground: #f7f3ec;
+  --cream: #f6f0e6;
+  --sand: #ffd9c2;
+
+  /* shadcn semantic tokens, mapped onto the brand above */
+  --background: var(--cream);
+  --foreground: var(--text-ink);
+  --card: #ffffff;
+  --card-foreground: var(--text-ink);
+  --popover: #ffffff;
+  --popover-foreground: var(--text-ink);
+  --primary: var(--brand);
+  --primary-foreground: #ffffff;
+  --secondary: var(--sand);
+  --secondary-foreground: var(--text-ink);
+  --muted: #efe7d8;
+  --muted-foreground: #6b6459;
+  --accent: var(--sand);
+  --accent-foreground: var(--text-ink);
+  --destructive: oklch(0.577 0.245 27.325);
+  --border: #e3d9c6;
+  --input: #e3d9c6;
+  --ring: var(--brand);
+  --radius: 0.875rem;
+
+  --chart-1: var(--flame);
+  --chart-2: var(--amber);
+  --chart-3: var(--brand-deep);
+  --chart-4: var(--orange);
+  --chart-5: var(--text-ink);
+  --sidebar: var(--card);
+  --sidebar-foreground: var(--foreground);
+  --sidebar-primary: var(--primary);
+  --sidebar-primary-foreground: var(--primary-foreground);
+  --sidebar-accent: var(--accent);
+  --sidebar-accent-foreground: var(--accent-foreground);
+  --sidebar-border: var(--border);
+  --sidebar-ring: var(--ring);
+
+  --gutter: clamp(1.1rem, 5vw, 2.5rem);
+  --max: 1240px;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-heading font-medium tracking-tight text-balance;
+    line-height: 1.05;
+    margin: 0;
+  }
+  h1 em,
+  h2 em {
+    @apply text-flame font-normal italic;
+  }
+  p {
+    margin: 0 0 1.1em;
+  }
+  a {
+    color: inherit;
+  }
+  ::selection {
+    background: var(--brand);
+    color: #fff;
+  }
+}
+
+/* ---------- Layout helpers ---------- */
+@utility wrap {
+  width: 100%;
+  max-width: var(--max);
+  margin-inline: auto;
+  padding-inline: max(var(--gutter), env(safe-area-inset-left, 0px));
+}
+
+@utility eyebrow {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+/* One continuous spacing scale for the rhythm between major sections, instead of each section picking its own breakpoints. */
+@utility section-py {
+  padding-block: clamp(2.5rem, 4vw + 1.5rem, 5rem);
+}
+
+.flamebar {
+  height: 8px;
+  background: var(--fire);
+}
+
+/* ---------- Marquee gallery ---------- */
+@keyframes marquee {
+  from {
+    transform: translate3d(0, 0, 0);
+  }
+  to {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+.animate-marquee {
+  animation: marquee var(--mduration, 40s) linear infinite;
+  will-change: transform;
+}
+.gallery-marquee {
+  animation: marquee var(--mduration, 40s) linear infinite;
+  will-change: transform;
+}
+.gallery-lane:hover .gallery-marquee {
+  animation-play-state: paused;
+}
+@keyframes marquee-reverse {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.animate-marquee-reverse {
+  animation: marquee-reverse var(--mduration, 40s) linear infinite;
+}
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.animate-rise {
+  animation: rise 0.8s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .animate-marquee,
+  .animate-marquee-reverse,
+  .animate-rise {
+    animation: none;
+  }
+}
+
+@media print {
+  .flamebar {
+    display: none !important;
+  }
+}
