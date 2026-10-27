@@ -76,16 +76,16 @@
   --brand: var(--flame);
   --brand-deep: #c93300; /* flame, darkened so small text passes contrast */
   --clay: #b5472a; /* muted terracotta — eyebrows/labels on light sections, so flame stays reserved for CTAs, stats and em emphasis */
-  --text-ink: #262322; /* body text color, not to be confused with the --ink section background below */
-  --ink: #15110f;
-  --ink-foreground: #f7f3ec;
-  --cream: #f6f0e6;
-  --sand: #ffd9c2;
+  --text-ink: #211d1a; /* body text color, not to be confused with the --ink section background below */
+  --ink: #191512;
+  --ink-foreground: #faf7f2;
+  --cream: #faf8f4;
+  --sand: #f7e6dc;
 
   /* shadcn semantic tokens, mapped onto the brand above */
   --background: var(--cream);
   --foreground: var(--text-ink);
-  --card: #ffffff;
+  --card: #fffefa;
   --card-foreground: var(--text-ink);
   --popover: #ffffff;
   --popover-foreground: var(--text-ink);
@@ -93,13 +93,13 @@
   --primary-foreground: #ffffff;
   --secondary: var(--sand);
   --secondary-foreground: var(--text-ink);
-  --muted: #efe7d8;
-  --muted-foreground: #6b6459;
+  --muted: #f0ece6;
+  --muted-foreground: #70665e;
   --accent: var(--sand);
   --accent-foreground: var(--text-ink);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: #e3d9c6;
-  --input: #e3d9c6;
+  --border: #e8e1d9;
+  --input: #e8e1d9;
   --ring: var(--brand);
   --radius: 0.875rem;
 
@@ -131,6 +131,8 @@
   }
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    background-image: radial-gradient(#8b735b0a 0.55px, transparent 0.55px);
+    background-size: 9px 9px;
   }
   h1,
   h2,
@@ -148,6 +150,10 @@
   }
   a {
     color: inherit;
+  }
+  :focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 4px;
   }
   ::selection {
     background: var(--brand);
@@ -177,8 +183,26 @@
 }
 
 .flamebar {
-  height: 8px;
+  height: 4px;
   background: var(--fire);
+}
+
+.section-kicker {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--clay);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.section-kicker::before {
+  width: 1.5rem;
+  height: 1px;
+  background: currentColor;
+  content: "";
 }
 
 /* ---------- Marquee gallery ---------- */
@@ -239,6 +263,14 @@
   .animate-marquee-reverse,
   .animate-rise {
     animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
   }
 }
 

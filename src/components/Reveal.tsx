@@ -4,11 +4,12 @@ import { motion, type Variants } from "motion/react";
 import type { ReactNode } from "react";
 
 const item: Variants = {
-  hidden: { opacity: 0, y: 32, scale: 0.97 },
-  visible: { opacity: 1, y: 0, scale: 1 },
+  hidden: { opacity: 0, y: 24 },
+  visible: { opacity: 1, y: 0 },
 };
 
-const revealTransition = { duration: 0.7, ease: [0.22, 1, 0.36, 1] as const };
+const revealTransition = { duration: 0.65, ease: [0.22, 1, 0.36, 1] as const };
+const viewport = { once: true, amount: 0.12 };
 
 type RevealProps = {
   /** Delay in ms before the animation starts. */
@@ -17,14 +18,14 @@ type RevealProps = {
   children: ReactNode;
 };
 
-/** Fades and rises an element each time it scrolls into view. */
+/** Reveals an element once as it enters the viewport. */
 export default function Reveal({ delay = 0, className, children }: RevealProps) {
   return (
     <motion.div
       className={className}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: false, amount: 0.15 }}
+      viewport={viewport}
       variants={item}
       transition={{ ...revealTransition, delay: delay / 1000 }}
     >
@@ -46,7 +47,7 @@ type RevealGroupProps = {
 /** Wraps a list of RevealItem children, cascading them when scrolled into view. */
 export function RevealGroup({ className, children }: RevealGroupProps) {
   return (
-    <motion.div className={className} initial="hidden" whileInView="visible" viewport={{ once: false, amount: 0.15 }} variants={container}>
+    <motion.div className={className} initial="hidden" whileInView="visible" viewport={viewport} variants={container}>
       {children}
     </motion.div>
   );

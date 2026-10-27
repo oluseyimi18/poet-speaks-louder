@@ -11,22 +11,22 @@ export default function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   const logo = (
-    <Image src="/logo.png" alt={site.name} width={247} height={143} priority className="h-10 w-auto" />
+    <Image src="/logo.png" alt={site.name} width={247} height={143} priority className="h-11 w-auto" />
   );
 
   return (
-    <header className="bg-background/90 sticky top-0 z-40 pt-[env(safe-area-inset-top,0px)] backdrop-blur-sm">
-      <div className="wrap flex h-[72px] items-center justify-between gap-4">
-        <a href="#top" aria-label={`${site.name}, back to top`} className="block leading-none">
+    <header className="bg-background/90 sticky top-0 z-40 border-b border-border/70 pt-[env(safe-area-inset-top,0px)] backdrop-blur-xl">
+      <div className="wrap flex h-[76px] items-center justify-between gap-4">
+        <a href="#top" aria-label={`${site.name}, back to top`} className="block shrink-0 leading-none">
           {logo}
         </a>
 
-        <nav aria-label="Main" className="hidden items-center gap-8 lg:flex">
+        <nav aria-label="Main" className="hidden items-center gap-7 lg:flex">
           {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="text-foreground/70 hover:text-foreground text-[0.82rem] font-bold tracking-[0.1em] uppercase"
+              className="text-muted-foreground hover:text-foreground relative py-2 text-[0.78rem] font-semibold tracking-[0.04em] transition-colors after:absolute after:inset-x-0 after:-bottom-1 after:h-px after:origin-left after:scale-x-0 after:bg-flame after:transition-transform hover:after:scale-x-100"
             >
               {item.label}
             </a>
@@ -34,9 +34,11 @@ export default function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <a href="#involved" className={buttonVariants({ className: "bg-ink border-ink hidden sm:inline-flex" })}>
-            Give
-          </a>
+          <div className="hidden sm:block">
+            <a href="#involved" className={buttonVariants()}>
+              Support the work
+            </a>
+          </div>
           <Button
             variant="outline"
             className="lg:hidden"
@@ -57,7 +59,7 @@ export default function SiteHeader() {
           className="h-dvh gap-0 overflow-y-auto rounded-none border-0 pt-[env(safe-area-inset-top,0px)] pb-8 sm:max-w-none"
         >
           <SheetTitle className="sr-only">Site menu</SheetTitle>
-          <div className="wrap flex h-[72px] items-center justify-between">
+          <div className="wrap flex h-[76px] items-center justify-between">
             <a
               href="#top"
               onClick={() => setOpen(false)}
