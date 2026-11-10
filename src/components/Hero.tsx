@@ -1,5 +1,4 @@
 import EditorialPhoto from "./EditorialPhoto";
-import { buttonVariants } from "@/components/ui/button";
 import { site } from "@/lib/site";
 import type { GalleryCategory } from "@/lib/gallery";
 import * as motion from "motion/react-client";
@@ -7,7 +6,6 @@ import * as motion from "motion/react-client";
 export default function Hero({ categories }: { categories: GalleryCategory[] }) {
   const lagos = categories.find((c) => c.slug === "lagos");
   const chicago = categories.find((c) => c.slug === "loud-and-clear");
-  const newYork = categories.find((c) => c.slug === "new-york");
 
   return (
     <section aria-labelledby="hero-title" className="relative isolate overflow-hidden bg-[#181613] text-[#f9f4eb]">
