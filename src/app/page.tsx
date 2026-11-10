@@ -1,5 +1,4 @@
 import About from "@/components/About";
-import CityTicker from "@/components/CityTicker";
 import Gallery from "@/components/Gallery";
 import GetInvolved from "@/components/GetInvolved";
 import Hero from "@/components/Hero";
@@ -15,20 +14,16 @@ export default async function HomePage() {
 
   return (
     <>
-      <a
-        href="#main"
-        className="bg-flame fixed top-[-4rem] left-4 z-[100] rounded-lg px-[1.1rem] py-[0.7rem] font-semibold text-white no-underline transition-[top] duration-150 focus:top-[calc(env(safe-area-inset-top,0px)+0.8rem)]"
-      >
+      <a href="#main" className="bg-flame fixed top-[-4rem] left-4 z-[100] rounded-lg px-[1.1rem] py-[0.7rem] font-semibold text-white no-underline transition-[top] duration-150 focus:top-[calc(env(safe-area-inset-top,0px)+0.8rem)]">
         Skip to main content
       </a>
       <div id="top" />
       <SiteHeader />
       <main id="main">
-        <Hero />
-        {/* <CityTicker /> */}
+        <Hero categories={categories} />
         <QuoteStats />
-        <About />
-        <Programmes />
+        <About categories={categories} />
+        <Programmes categories={categories} />
         <Gallery categories={categories} />
         <GetInvolved />
         <Signoff />
