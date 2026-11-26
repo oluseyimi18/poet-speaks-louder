@@ -7,7 +7,7 @@ export default function QuoteStats() {
     <section aria-labelledby="purpose-title" className="section-py">
       <div className="wrap">
         <Reveal>
-          <p className="eyebrow text-clay">Why we exist</p>
+          {/* <p className="eyebrow text-clay">Why we exist</p> */}
           <h2 id="purpose-title" className="mt-4 max-w-3xl text-4xl leading-tight md:text-6xl">
             Creative voices can <em className="text-flame">change a room.</em>
           </h2>

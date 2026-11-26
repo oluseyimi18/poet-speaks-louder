@@ -12,7 +12,7 @@ export default function About({ categories }: { categories: GalleryCategory[] })
     <section id="about" aria-labelledby="about-title" className="scroll-mt-20 overflow-hidden bg-[#f8f5ef] py-20 md:py-32">
       <div className="wrap">
         <Reveal>
-          <p className="eyebrow text-clay">01 / The story behind the voices</p>
+          {/* <p className="eyebrow text-clay">01 / The story behind the voices</p> */}
           <div className="mt-7 grid gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-end lg:gap-20">
             <h2 id="about-title" className="!text-[clamp(3.2rem,7vw,7rem)] !leading-[0.96] !tracking-[-0.055em]">
               Not just a stage.<br /><em className="text-flame">A place to belong.</em>

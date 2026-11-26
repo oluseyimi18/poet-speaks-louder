@@ -104,7 +104,7 @@ export default function Hero() {
             </a>
           </div>
 
-          <div role="group" aria-label="Background slideshow controls" className="mt-8 flex items-center gap-3">
+          {/* <div role="group" aria-label="Background slideshow controls" className="mt-8 flex items-center gap-3">
             <button
               type="button"
               aria-label="Previous background photo"
@@ -134,7 +134,7 @@ export default function Hero() {
                 {isPlaying ? "Pause" : "Play"}
               </button>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
     </section>
