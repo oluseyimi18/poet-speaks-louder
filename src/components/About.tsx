@@ -9,7 +9,7 @@ export default function About({ categories }: { categories: GalleryCategory[] })
   const chicago = categories.find((c) => c.slug === "loud-and-clear");
 
   return (
-    <section id="about" aria-labelledby="about-title" className="scroll-mt-20 overflow-hidden bg-[#f7f0e6] py-20 md:py-32">
+    <section id="about" aria-labelledby="about-title" className="scroll-mt-20 overflow-hidden bg-[#f8f5ef] py-20 md:py-32">
       <div className="wrap">
         <Reveal>
           <p className="eyebrow text-clay">01 / The story behind the voices</p>
@@ -18,7 +18,7 @@ export default function About({ categories }: { categories: GalleryCategory[] })
               Not just a stage.<br /><em className="text-flame">A place to belong.</em>
             </h2>
             <div>
-              <p className="font-display mb-5 text-2xl italic leading-tight text-[#b84c2a]">A home for voices that carry light.</p>
+              <p className="font-display mb-5 text-2xl italic leading-tight text-brand-deep">A home for voices that carry light.</p>
               <p className="text-muted-foreground max-w-[62ch] text-base leading-[1.9] md:text-lg">{about.intro}</p>
             </div>
           </div>
@@ -27,10 +27,12 @@ export default function About({ categories }: { categories: GalleryCategory[] })
           <EditorialPhoto photo={lagos?.photos[4] ?? lagos?.photos[0]} alt="Participants at a Poets Speak Louder workshop in Lagos" caption="Lagos, Nigeria" className="col-span-8 aspect-[4/5] md:col-span-6 md:aspect-[5/4]" sizes="(min-width: 768px) 50vw, 70vw" />
           <EditorialPhoto photo={newYork?.photos[2] ?? newYork?.photos[0]} alt="Poets Speak Louder creative workshop in New York" caption="New York, USA" className="col-span-4 aspect-[2/5] md:col-span-3 md:aspect-[3/4]" sizes="(min-width: 768px) 25vw, 35vw" />
           <EditorialPhoto photo={chicago?.photos[3] ?? chicago?.photos[0]} alt="Young people at the Loud and Clear workshop in Chicago" caption="Chicago, USA" className="col-span-12 aspect-[16/9] md:col-span-3 md:aspect-[3/4]" sizes="(min-width: 768px) 25vw, 100vw" />
+          <EditorialPhoto photo={newYork?.photos[8] ?? newYork?.photos[0]} alt="Poets sharing their work at a Poets Speak Louder gathering in New York" caption="New York, USA" className="col-span-6 aspect-[4/3]" sizes="(min-width: 768px) 50vw, 50vw" />
+          <EditorialPhoto photo={lagos?.photos[18] ?? lagos?.photos[0]} alt="Creative community members connecting at a Poets Speak Louder event in Lagos" caption="Lagos, Nigeria" className="col-span-6 aspect-[4/3]" sizes="(min-width: 768px) 50vw, 50vw" />
         </div>
-        <div className="mt-6 flex items-center justify-between gap-5 border-t border-[#c7b9a9] pt-5 text-xs font-semibold uppercase tracking-[0.18em] text-[#73675c]">
+        <div className="mt-6 flex items-center justify-between gap-5 border-t border-border pt-5 text-xs font-semibold uppercase tracking-[0.18em] text-muted-foreground">
           <span>Real people. Real stories. Real impact.</span>
-          <a href="#gallery" className="text-[#c64a23] underline underline-offset-4">See our moments ↗</a>
+          <a href="#gallery" className="text-brand-deep underline underline-offset-4">See our moments ↗</a>
         </div>
       </div>
     </section>

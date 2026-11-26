@@ -27,7 +27,7 @@ export default function PhotoSlot({ slot, src: srcOverride, alt, label, hint, cl
   return (
     <div
       className={cn(
-        "relative isolate overflow-hidden rounded-[1.125rem] bg-[linear-gradient(135deg,#ffebdf,#ffd9c2)] shadow-[0_1px_2px_rgba(38,35,34,0.04),0_12px_28px_-12px_rgba(38,35,34,0.22)]",
+        "relative isolate overflow-hidden rounded-[1.125rem] bg-[linear-gradient(135deg,#f8ede0,#f0e2d2)] shadow-[0_1px_2px_rgba(44,38,34,0.04),0_12px_28px_-12px_rgba(44,38,34,0.18)]",
         className,
       )}
     >
@@ -35,7 +35,7 @@ export default function PhotoSlot({ slot, src: srcOverride, alt, label, hint, cl
         <Image src={src} alt={alt} fill sizes={sizes} priority={priority} className={cn("object-cover", imgClassName)} />
       ) : (
         <div className="absolute inset-x-4 bottom-3.5 text-xs leading-snug font-medium tracking-wide text-[#8a4b2e] uppercase">
-          <b className="mb-0.5 block font-bold text-[#5a2a14]">Photo slot: {label}</b>
+          <b className="mb-0.5 block font-bold text-[#6f432f]">Photo slot: {label}</b>
           {hint}
         </div>
       )}

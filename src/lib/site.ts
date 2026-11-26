@@ -6,7 +6,7 @@ export const site = {
   name: "Poets Speak Louder",
   tagline: "A home for voices that carry light.",
   description:
-    "Poets Speak Louder is a faith-based 501(c)(3) non-profit organization dedicated to empowering people to discover and express their creativity through poetry, spoken word and other forms of public speaking. We teach, train, mentor and connect creatives across countries and cities through in-person and virtual workshops and community discussions.",
+    "Poets Speak Louder is a faith-based 501 (c)(3) non-profit organization dedicated to empowering people to discover and express their creativity through poetry, spoken word, and other forms of public speaking. We teach, train, mentor, and intentionally foster connections between creatives from different countries and cities through in-person and virtual workshops and community discussions.",
   shortDescription:
     "A faith-based 501(c)(3) non-profit creating spaces for creative voices to be discovered, nurtured and fully expressed.",
   // Set NEXT_PUBLIC_SITE_URL in .env.local and on Vercel. See README.

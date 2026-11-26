@@ -16,11 +16,11 @@ export default function QuoteStats() {
         <div className="mt-12 grid gap-12 lg:grid-cols-2 lg:gap-16">
           <RevealGroup className="grid gap-9 sm:grid-cols-2">
             <RevealItem>
-              <p className="eyebrow text-flame">Our Vision</p>
+              <p className="eyebrow text-brand-deep">Our Vision</p>
               <p className="font-display mt-4 text-xl leading-snug md:text-2xl">{about.vision}</p>
             </RevealItem>
             <RevealItem>
-              <p className="eyebrow text-flame">Our Mission</p>
+              <p className="eyebrow text-brand-deep">Our Mission</p>
               <p className="font-display mt-4 text-xl leading-snug md:text-2xl">{about.mission}</p>
             </RevealItem>
           </RevealGroup>

@@ -20,7 +20,7 @@ export default async function HomePage() {
       <div id="top" />
       <SiteHeader />
       <main id="main">
-        <Hero categories={categories} />
+        <Hero />
         <QuoteStats />
         <About categories={categories} />
         <Programmes categories={categories} />

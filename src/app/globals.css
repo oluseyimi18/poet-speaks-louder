@@ -67,39 +67,39 @@
   color-scheme: light;
 
   /* Poets Speak Louder brand (from the logo) */
-  --red: #fc0f02;
-  --flame: #f93f06;
-  --orange: #f76c0a;
-  --amber: #ff9f1c;
+  --red: #b94f39;
+  --flame: #d8733c;
+  --orange: #e69152;
+  --amber: #efba78;
   --gold: var(--amber); /* accent used on inverted (ink) sections */
-  --fire: linear-gradient(100deg, #fc0f02 0%, #f93f06 35%, #f76c0a 65%, #ff9f1c 100%);
+  --fire: linear-gradient(100deg, #b94f39 0%, #d8733c 35%, #e69152 65%, #efba78 100%);
   --brand: var(--flame);
-  --brand-deep: #c93300; /* flame, darkened so small text passes contrast */
-  --clay: #b5472a; /* muted terracotta — eyebrows/labels on light sections, so flame stays reserved for CTAs, stats and em emphasis */
-  --text-ink: #262322; /* body text color, not to be confused with the --ink section background below */
-  --ink: #15110f;
-  --ink-foreground: #f7f3ec;
-  --cream: #f6f0e6;
-  --sand: #ffd9c2;
+  --brand-deep: #984a2c; /* dark terracotta for small text on light surfaces */
+  --clay: #81513a;
+  --text-ink: #2c2622;
+  --ink: #292420;
+  --ink-foreground: #f8f5ef;
+  --cream: #f8f5ef;
+  --sand: #f0e2d2;
 
   /* shadcn semantic tokens, mapped onto the brand above */
   --background: var(--cream);
   --foreground: var(--text-ink);
-  --card: #ffffff;
+  --card: #fffdf9;
   --card-foreground: var(--text-ink);
   --popover: #ffffff;
   --popover-foreground: var(--text-ink);
   --primary: var(--brand);
-  --primary-foreground: #ffffff;
+  --primary-foreground: var(--text-ink);
   --secondary: var(--sand);
   --secondary-foreground: var(--text-ink);
-  --muted: #efe7d8;
+  --muted: #efe8dd;
   --muted-foreground: #6b6459;
   --accent: var(--sand);
   --accent-foreground: var(--text-ink);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: #e3d9c6;
-  --input: #e3d9c6;
+  --border: #e4d8c8;
+  --input: #e4d8c8;
   --ring: var(--brand);
   --radius: 0.875rem;
 

@@ -20,7 +20,7 @@ export default function EditorialPhoto({
   caption,
 }: Props) {
   return (
-    <figure className={`relative isolate m-0 overflow-hidden bg-[#dfc5a8] ${className}`}>
+    <figure className={`relative isolate m-0 overflow-hidden bg-[#e6d5c0] ${className}`}>
       {photo ? (
         <Image
           src={photo.src}
@@ -31,7 +31,7 @@ export default function EditorialPhoto({
           className="object-cover transition-transform duration-1000 ease-out hover:scale-[1.035]"
         />
       ) : (
-        <div className="absolute inset-0 bg-[linear-gradient(135deg,#c5a17f,#f6e9d8)]" aria-hidden="true" />
+        <div className="absolute inset-0 bg-[linear-gradient(135deg,#c7a882,#f7efe3)]" aria-hidden="true" />
       )}
       {caption && (
         <figcaption className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/65 to-transparent px-5 pb-5 pt-14 text-xs font-semibold uppercase tracking-[0.18em] text-white">
